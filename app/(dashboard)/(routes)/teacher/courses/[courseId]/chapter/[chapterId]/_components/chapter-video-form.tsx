@@ -1,9 +1,9 @@
 "use client";
 
+import MuxPlayer from "@mux/mux-player-react";
 import { Chapter, MuxData } from "@prisma/client";
 import axios from "axios";
-import { ImageIcon, Pencil, PlusCircle, Video } from "lucide-react";
-import Image from "next/image";
+import { Pencil, PlusCircle, Video } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -50,7 +50,7 @@ export const ChapterVideoForm = ({
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
-        Chapter Video
+        Chapter video
         <Button onClick={toggleEdit} variant="ghost">
           {isEditing && <>Cancel</>}
           {!isEditing && !initialData.videoUrl && (
@@ -62,7 +62,7 @@ export const ChapterVideoForm = ({
           {!isEditing && initialData.videoUrl && (
             <>
               <Pencil className="h-4 w-4 mr-2" />
-              Edit a video
+              Edit video
             </>
           )}
         </Button>
@@ -73,7 +73,9 @@ export const ChapterVideoForm = ({
             <Video className="h-10 w-10 text-slate-500" />
           </div>
         ) : (
-          <div className="relative aspect-video mt-2">Video Upload</div>
+          <div className="relative aspect-video mt-2">
+            <MuxPlayer playbackId={initialData?.muxData?.playbackId || ""} />
+          </div>
         ))}
       {isEditing && (
         <div>
@@ -86,14 +88,14 @@ export const ChapterVideoForm = ({
             }}
           />
           <div className="text-xs text-muted-foreground mt-4">
-            Upload this chapter&pos;s video
+            Upload this chapter&apos;s video
           </div>
         </div>
       )}
       {initialData.videoUrl && !isEditing && (
-        <div className="text-xs text-muted-foreground -mt-20">
-          Videos can take a few minutes to process. Refresh the page if videos
-          does not appear
+        <div className="text-xs text-muted-foreground mt-2">
+          Videos can take a few minutes to process. Refresh the page if video
+          does not appear.
         </div>
       )}
     </div>
