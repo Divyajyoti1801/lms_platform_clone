@@ -44,6 +44,7 @@ export async function DELETE(
           chapterId: params.chapterId,
         },
       });
+
       if (existingMuxData) {
         await Video.Assets.del(existingMuxData.assetId);
         await db.muxData.delete({
@@ -93,15 +94,18 @@ export async function PATCH(
   try {
     const { userId } = auth();
     const { isPublished, ...values } = await req.json();
+
     if (!userId) {
       return new NextResponse("UnAuthorized", { status: 401 });
     }
+
     const courseOwner = await db.course.findUnique({
       where: {
         id: params.courseId,
         userId: userId,
       },
     });
+
     if (!courseOwner) {
       return new NextResponse("UnAuthorized", { status: 401 });
     }
