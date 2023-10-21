@@ -29,7 +29,7 @@ export const CourseActions = ({
         await axios.patch(`/api/courses/${courseId}/chapters/unpublish`);
         toast.success("Course Unpublished");
       } else {
-        await axios.patch(`/api/courses/${courseId}/chapters/publish`);
+        await axios.patch(`/api/courses/${courseId}/publish`);
         toast.success("Course Published");
       }
       router.refresh();
