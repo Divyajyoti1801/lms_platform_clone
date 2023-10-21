@@ -15,8 +15,10 @@ import { CategoryForm } from "./_components/category-form";
 import { DescriptionForm } from "./_components/description-form";
 import { ImageForm } from "./_components/image-form";
 
+import { Banner } from "@/components/banner";
 import { AttachmentForm } from "./_components/attachment-form";
 import { ChapterForm } from "./_components/chapter-form";
+import { CourseActions } from "./_components/course-actions";
 import { PriceForm } from "./_components/price-form";
 import { TitleForm } from "./_components/title-form";
 
@@ -74,6 +76,12 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
 
   return (
     <>
+      {!course.isPublished && (
+        <Banner
+          label="This course is unpublished. It will not be visible to the students"
+          variant="warning"
+        />
+      )}
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-2">
@@ -82,6 +90,11 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
               Complete all fields {completionText}
             </span>
           </div>
+          <CourseActions
+            disabled={!isComplete}
+            courseId={params.courseId}
+            isPublished={course.isPublished}
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
           <div>
