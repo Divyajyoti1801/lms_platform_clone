@@ -4,6 +4,7 @@ import { UserButton } from "@clerk/nextjs";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SearchInput } from "./search-input";
 import { Button } from "./ui/button";
 
 export const NavbarRoutes = () => {
@@ -17,7 +18,7 @@ export const NavbarRoutes = () => {
     <>
       {isSearchPage && (
         <div className="hidden md:block">
-          <SeachInput />
+          <SearchInput />
         </div>
       )}
       <div className="flex gap-x-2 ml-auto">
