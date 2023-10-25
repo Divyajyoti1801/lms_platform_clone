@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 export async function PUT(
-  req: Response,
+  req: Request,
   { params }: { params: { courseId: string } }
 ) {
   try {
