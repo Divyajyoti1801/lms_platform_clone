@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LMS Platform: Learn, Teach, Succeed
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+
+Welcome to the LMS Platform repository, a comprehensive eLearning system built using Next.js, React, Stripe, Mux, Prisma, Tailwind, MySQL, and more.
+
+![Project Image](url_to_project_screenshot.png)
+
+## Table of Contents
+
+- [LMS Platform: Learn, Teach, Succeed](#lms-platform-learn-teach-succeed)
+  - [Table of Contents](#table-of-contents)
+  - [Key Features](#key-features)
+  - [Screenshots](#screenshots)
+  - [Tech Stack](#tech-stack)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Key Features
+
+- **Browse & Filter Courses**: Search and filter courses to find the content you're interested in.
+- **Purchase Courses**: Seamlessly buy courses using Stripe integration.
+- **Track Progress**: Mark chapters as completed or uncompleted to monitor your learning journey.
+- **Progress Calculation**: See your progress for each course, making learning more effective.
+- **Student Dashboard**: Access your personalized student dashboard for a user-friendly experience.
+- **Teacher Mode**: Switch to teacher mode to create and manage courses.
+- **Course Creation**: Easily create new courses tailored to your expertise.
+- **Chapter Management**: Create new chapters and reorder them with drag and drop.
+- **Multimedia Support**: Upload thumbnails, attachments, and videos using UploadThing.
+- **Video Processing**: Utilize Mux for efficient video processing.
+- **HLS Video Player**: Enjoy high-quality video playback using Mux.
+- **Rich Text Editor**: Create detailed chapter descriptions with a rich text editor.
+- **User Authentication**: Ensure secure access with authentication using Clerk.
+- **ORM with Prisma**: Manage data efficiently with Prisma as your ORM.
+- **Database Backend**: Use MySQL hosted on PlanetScale for a reliable database solution.
+
+## Screenshots
+
+![Screenshot 1](screenshot_1.PNG)
+
+![Screenshot 2](screenshot_2.PNG)
+
+## Tech Stack
+
+- Next.js
+- React
+- Stripe
+- Mux
+- Prisma
+- MySQL
+- Tailwind CSS
+- Clerk
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository: `git clone https://github.com/yourusername/your-repo.git`
+2. Navigate to the project directory: `cd your-repo`
+3. Install dependencies: `npm install`
+4. Configure environment variables as needed.
+5. Start the development server: `npm run dev`
+6. Access the application in your browser at `http://localhost:3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Provide detailed instructions on how to use your LMS platform, including key features, user guides, and special considerations.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-## Learn More
+Contributions are welcome! Fork the repository, make your changes, and create a pull request.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Created with passion by [Divyajyoti](https://github.com/Divyajyoti1801)
