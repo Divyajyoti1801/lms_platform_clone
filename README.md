@@ -4,7 +4,7 @@
 
 Welcome to the LMS Platform repository, a comprehensive eLearning system built using Next.js, React, Stripe, Mux, Prisma, Tailwind, MySQL, and more.
 
-![Project Image](url_to_project_screenshot.png)
+Live Project URL : [Project Live-URL]("/")
 
 ## Table of Contents
 
