@@ -4,7 +4,7 @@
 
 Welcome to the LMS Platform repository, a comprehensive eLearning system built using Next.js, React, Stripe, Mux, Prisma, Tailwind, MySQL, and more.
 
-Live Project URL : [Project Live-URL]("/")
+Live-Project-URL : [LMS-Clone]("https://lms-platform-clone.vercel.app")
 
 ## Table of Contents
 
